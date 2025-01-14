@@ -60,5 +60,68 @@
     "ostream": "cpp",
     "typeindex": "cpp",
     "typeinfo": "cpp"
+  },
+  "C_Cpp.errorSquiggles": "disabled",
+  "accessibility.signals.chatRequestSent": {
+    "sound": "off",
+    "announcement": "off"
+  },
+  "accessibility.signals.chatResponseReceived": {
+    "sound": "off"
+  },
+  "accessibility.signals.clear": {
+    "sound": "off",
+    "announcement": "off"
+  },
+  "accessibility.signals.diffLineDeleted": {
+    "sound": "off"
+  },
+  "accessibility.signals.diffLineInserted": {
+    "sound": "off"
+  },
+  "accessibility.signals.diffLineModified": {
+    "sound": "off"
+  },
+  "accessibility.signals.lineHasBreakpoint": {
+    "sound": "off",
+    "announcement": "off"
+  },
+  "accessibility.signals.lineHasError": {
+    "sound": "off",
+    "announcement": "off"
+  },
+  "accessibility.signals.lineHasFoldedArea": {
+    "sound": "off",
+    "announcement": "off"
+  },
+  "accessibility.signals.lineHasInlineSuggestion": {
+    "sound": "off"
+  },
+  "accessibility.signals.lineHasWarning": {
+    "sound": "off"
+  },
+  "accessibility.signals.noInlayHints": {
+    "announcement": "off"
+  },
+  "accessibility.signals.notebookCellCompleted": {
+    "sound": "off"
+  },
+  "accessibility.signals.onDebugBreak": {
+    "sound": "off"
+  },
+  "accessibility.signals.notebookCellFailed": {
+    "sound": "off"
+  },
+  "accessibility.signals.positionHasError": {
+    "sound": "off"
+  },
+  "accessibility.signals.positionHasWarning": {
+    "sound": "off"
+  },
+  "accessibility.signals.progress": {
+    "sound": "off"
+  },
+  "accessibility.signals.taskCompleted": {
+    "sound": "off"
   }
 }

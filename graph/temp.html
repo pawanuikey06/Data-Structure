@@ -1,0 +1,135 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Responsive Webpage</title>
+    <style>
+        body {
+            margin: 0;
+            font-family: Arial, sans-serif;
+        }
+
+        /* Navbar styles */
+        .navbar {
+            position: fixed;
+            top: 0;
+            width: 100%;
+            background-color: #333;
+            color: white;
+            padding: 10px 20px;
+            z-index: 1000;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+        }
+
+        /* Layout styles */
+        .container {
+            display: flex;
+            margin-top: 50px; /* Adjust for navbar height */
+            height: calc(100vh - 100px); /* Adjust for navbar and footer height */
+        }
+
+        .left-menu {
+            width: 20%;
+            background-color: #f4f4f4;
+            border-right: 1px solid #ddd;
+            padding: 20px;
+            transition: width 0.3s;
+        }
+
+        .main-content {
+            flex: 1;
+            padding: 20px;
+            overflow-y: auto;
+        }
+
+        .right-panel {
+            width: 20%;
+            background-color: #f4f4f4;
+            border-left: 1px solid #ddd;
+            padding: 20px;
+        }
+
+        .footer {
+            background-color: #333;
+            color: white;
+            text-align: center;
+            padding: 10px 20px;
+            position: fixed;
+            bottom: 0;
+            width: 100%;
+        }
+
+        /* Collapsible menu styles */
+        .collapse-button {
+            display: none;
+            margin-bottom: 10px;
+        }
+
+        @media (max-width: 992px) {
+            .collapse-button {
+                display: block;
+            }
+            .left-menu.collapsed {
+                width: 0;
+                padding: 0;
+                overflow: hidden;
+            }
+        }
+    </style>
+</head>
+<body>
+    <div class="navbar">
+        <span>Logo</span>
+        <span>Navbar</span>
+    </div>
+
+    <div class="container">
+        <div class="left-menu" id="leftMenu">
+            <button class="collapse-button" onclick="toggleMenu()">Toggle Menu</button>
+            <p>Left Menu</p>
+        </div>
+        <div class="main-content">
+            <h1>Main Content</h1>
+            <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit.</p>
+        </div>
+        <div class="right-panel">
+            <p>Right Panel</p>
+        </div>
+    </div>
+
+    <div class="footer">
+        Footer Content
+    </div>
+
+    <script>
+        function toggleMenu() {
+            const leftMenu = document.getElementById('leftMenu');
+            leftMenu.classList.toggle('collapsed');
+        }
+
+        function adjustPageWidth() {
+            const screenWidth = window.innerWidth;
+            let scale = 1;
+
+            if (screenWidth <= 600) {
+                scale = 0.5;
+            } else if (screenWidth <= 700) {
+                scale = 0.75;
+            } else if (screenWidth <= 767) {
+                scale = 0.8;
+            } else if (screenWidth <= 1600) {
+                scale = 0.9;
+            }
+
+            document.body.style.transform = `scale(${scale})`;
+            document.body.style.transformOrigin = 'top left';
+        }
+
+        window.addEventListener('resize', adjustPageWidth);
+        window.addEventListener('load', adjustPageWidth);
+    </script>
+</body>
+</html>
